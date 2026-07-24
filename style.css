@@ -22,7 +22,9 @@
   box-sizing: border-box;
   font-family: var(--Quicksand);
 }
-
+html {
+  scroll-behavior:;
+}
 body {
   line-height: 1.4;
   color: var(--dark);
@@ -227,7 +229,7 @@ header {
 .blog-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2 rem;
+  gap: 2rem;
   margin: 2rem 0;
 }
 .blog-img {
@@ -276,5 +278,99 @@ header {
 .blog-text a:hover {
   background: var(--extra-dark);
 }
-
 /* End of blog styling */
+
+/* Start of about styling */
+.about {
+  padding: 4.5rem 0;
+}
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  align-items: center;
+}
+.about-text {
+  margin: 2rem 0;
+}
+.about-text p {
+  font-size: 1.1rem;
+  padding: 0.6rem 0;
+  opacity: o.8;
+}
+footer {
+  background-color: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+.social-links a img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.social-links a {
+  border: 2px solid #fff;
+  /* color: #fff; */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 0 0.3rem;
+  transition: all 0.5s ease;
+}
+.social-links a:hover {
+  background-color: #fff;
+  color: var(--dark);
+}
+footer span {
+  margin-top: 1rem;
+  display: block;
+  font-family: var(--Playfair);
+  letter-spacing: 2px;
+}
+/* End of footer styling */
+
+.navbar-links i{
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+.navbar-links a{
+  display: none;
+}
+.navbar-links i{
+  display: block;
+}
+.banner-title{
+  font-size: 3.5rem;
+  padding-bottom: 1.5rem;
+}
+.design-content {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap:2rem;
+}
+.blog-content{
+  /* display:grid; */
+  grid-template-columns: 100%;
+  /* gap: 2rem; */
+  /* margin: 2rem 0; */
+}
+.about-content{
+  display: grid;
+  grid-template-columns: 100%;
+  column-gap: 3rem;
+  align-items: center;
+}
+
+}
